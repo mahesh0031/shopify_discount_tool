@@ -20,4 +20,4 @@ This tool allows store owners to apply bulk percentage discounts to all products
 
 1. Clone the repository:
    ```bash
-   git clone https://git@github.com:mahesh0031/shopiffy_discount_tool.git
+   git clone https://github.com/mahesh0031/shopify_discount_tool.git
