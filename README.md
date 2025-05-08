@@ -22,3 +22,13 @@ This tool allows store owners to apply bulk percentage discounts to all products
 1. Clone the repository:
    ```bash
    git clone https://github.com/mahesh0031/shopify_discount_tool.git
+
+## 🔗 Live Demo
+
+You can access the live version of this project here:  
+👉 [https://shopify-discount-tool.onrender.com/](https://shopify-discount-tool.onrender.com/)
+
+> ⚠️ **Note**:  
+> This app is hosted on [Render](https://render.com/) using the free tier.  
+> After 15 minutes of inactivity, the service goes to sleep.  
+> When accessed again, it may take **20–60 seconds** to wake up.
