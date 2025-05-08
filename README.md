@@ -32,3 +32,28 @@ You can access the live version of this project here:
 > This app is hosted on [Render](https://render.com/) using the free tier.  
 > After 15 minutes of inactivity, the service goes to sleep.  
 > When accessed again, it may take **20–60 seconds** to wake up.
+
+
+## Or you can use this on postman as well
+> for applying discount 
+> endpoint : https://shopify-discount-tool.onrender.com/apply-discount
+> headers
+Content-Type : application/json
+data -> body -> raw 
+{
+  "collection_id": "collection id",
+  "percentage": 10,
+  "price_updation_name": "Random",
+  "shop": "YourStore.myshopify.com",
+  "token": "shpat_##############"
+}
+
+> for rollback discount
+> endpoint : https://shopify-discount-tool.onrender.com/rollback-discount
+> headers
+Content-Type : application/json
+data -> body -> raw 
+{
+  "price_updation_name": "Random",
+  "shop": "YourStore.myshopify.com"
+}
