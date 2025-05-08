@@ -47,6 +47,7 @@ document
             statusDiv.className = "alert alert-success d-block";
             statusDiv.innerText = "✅ Batch found.";
             tableContainer.classList.remove("d-none");
+            document.getElementById("batchTableContainer").style.display = "block";
           } catch (err) {
             statusDiv.className = "alert alert-danger d-block";
             statusDiv.innerText = "❌ Error: " + err.message;

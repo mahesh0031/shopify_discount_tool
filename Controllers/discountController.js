@@ -287,8 +287,6 @@ const applyDiscount = async (req, res) => {
       return res.status(500).send('❌ Failed to get stagedUploadPath.');
     }
 
-    console.log('✅ stagedUploadPath:', stagedUploadPath);
-
     if (uploadResponse.status !== 201) {
       return res.status(500).send('❌ Failed to upload file.');
     }

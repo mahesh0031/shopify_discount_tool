@@ -15,6 +15,7 @@ This tool allows store owners to apply bulk percentage discounts to all products
 - JavaScript (vanilla)
 - ExpressJs Node.js (for backend)
 - Shopify REST & GraphQL APIs
+- Mongo db for database
 
 ## 🚀 Getting Started
 

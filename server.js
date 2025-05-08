@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const routes = require('./routes'); // Import routes from the routes folder
+const routes = require('./routes');
+require('dotenv').config();
 
 const app = express();
 
@@ -11,18 +12,29 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Connect MongoDB
-// change the db url as per your requirement
-mongoose.connect('mongodb://localhost:27017/ShopifyDiscounts', {
+// MongoDB connection
+const mongoURI = process.env.MONGO_URI;
+
+if (!mongoURI) {
+  console.error('❌ MONGO_URI is not defined in the environment!');
+  process.exit(1);
+}
+
+mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+}).then(() => {
+  console.log('✅ Connected to MongoDB Atlas');
+}).catch((err) => {
+  console.error('❌ MongoDB connection error:', err);
+  process.exit(1);
 });
-console.log('✅ Connected to MongoDB');
 
-// Use routes from the routes folder
-app.use(routes); // This will handle all route definitions
+// Routes
+app.use(routes);
 
 // Start server
-app.listen(3000, () => {
-  console.log('🚀 Server running at http://localhost:3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
