@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
-const discountController = require('../controllers/discountController');
-const rollbackController = require('../controllers/rollbackController');
+const discountController = require('../Controllers/discountController');
+const rollbackController = require('../Controllers/rollbackController');
 
 // Serve the main page
 router.get('/', (req, res) => {
